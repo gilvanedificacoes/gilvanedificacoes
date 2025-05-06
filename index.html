@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilvan Edificações | Construção Civil de Excelência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: #f59e0b;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-amber-500 text-white p-2 rounded mr-3">
+                    <i class="fas fa-building text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">GILVAN <span class="text-amber-500">EDIFICAÇÕES</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-800 hover:text-amber-500 font-medium">Início</a>
+                <a href="#sobre" class="text-gray-800 hover:text-amber-500 font-medium">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-800 hover:text-amber-500 font-medium">Serviços</a>
+                <a href="#portfolio" class="text-gray-800 hover:text-amber-500 font-medium">Portfólio</a>
+                <a href="#contato" class="text-gray-800 hover:text-amber-500 font-medium">Contato</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#inicio" class="block py-2 text-gray-800 hover:text-amber-500">Início</a>
+            <a href="#sobre" class="block py-2 text-gray-800 hover:text-amber-500">Sobre Nós</a>
+            <a href="#servicos" class="block py-2 text-gray-800 hover:text-amber-500">Serviços</a>
+            <a href="#portfolio" class="block py-2 text-gray-800 hover:text-amber-500">Portfólio</a>
+            <a href="#contato" class="block py-2 text-gray-800 hover:text-amber-500">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Excelência em Construção Civil</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Construindo sonhos e realizando projetos com qualidade, segurança e compromisso.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                </a>
+                <a href="#servicos" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                    <i class="fas fa-hard-hat"></i> Nossos Serviços
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Sobre a Gilvan Edificações</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipe de construção" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mais de uma década construindo excelência</h3>
+                    <p class="text-gray-600 mb-4">A Gilvan Edificações é uma empresa especializada em construção civil, atuando no mercado com projetos de médio e grande porte nos setores comercial, residencial e industrial.</p>
+                    <p class="text-gray-600 mb-6">Com uma equipe altamente qualificada e comprometida, entregamos obras com qualidade, segurança e dentro dos prazos estabelecidos, garantindo a total satisfação de nossos clientes.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-amber-500"></i>
+                            </div>
+                            <span class="text-gray-700">Qualidade garantida</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-amber-500"></i>
+                            </div>
+                            <span class="text-gray-700">Prazos cumpridos</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-amber-500"></i>
+                            </div>
+                            <span class="text-gray-700">Equipe especializada</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-amber-500"></i>
+                            </div>
+                            <span class="text-gray-700">Materiais de primeira</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contato" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition">
+                        Solicite um Orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Nossos Serviços</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos soluções completas em construção civil para diversos segmentos do mercado.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-home text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Residencial</h3>
+                    <p class="text-gray-600 mb-4">Projetamos e construímos residências de alto padrão, desde casas até condomínios fechados, com atenção aos detalhes e acabamentos refinados.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-building text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Comercial</h3>
+                    <p class="text-gray-600 mb-4">Edifícios corporativos, lojas, shopping centers e outros empreendimentos comerciais com soluções personalizadas para cada negócio.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-industry text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Industrial</h3>
+                    <p class="text-gray-600 mb-4">Galpões industriais, fábricas e complexos logísticos com estrutura robusta e soluções técnicas especializadas para atender sua produção.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Nossas Obras Realizadas</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Conheça alguns dos nossos projetos mais recentes e destaque-se com nossa qualidade.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Residencial Green Valley" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Residencial Green Valley</h3>
+                        <p class="text-gray-600 mb-4">Condomínio de alto padrão com 24 unidades, área de lazer completa e acabamentos premium.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Concluído: Jun/2022</span>
+                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edifício Corporate" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Edifício Corporate</h3>
+                        <p class="text-gray-600 mb-4">Torre comercial de 12 andares com estrutura moderna, elevadores de alta performance e fachada envidraçada.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Concluído: Dez/2021</span>
+                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80" alt="Industrial Tech Park" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Industrial Tech Park</h3>
+                        <p class="text-gray-600 mb-4">Complexo industrial com 5 galpões de 2.000m² cada, escritórios administrativos e área de carga.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Concluído: Mar/2023</span>
+                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                    <i class="fas fa-images mr-2"></i> Ver Mais Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Entre em Contato</h2>
+                <div class="section-divider bg-white"></div>
+                <p class="max-w-2xl mx-auto">Estamos prontos para transformar seu projeto em realidade. Fale conosco!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Informações de Contato</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Endereço</h4>
+                                <p>AVENIDA BRIG FARIA LIMA, 1572 CONJ 1022, JARDIM PAULISTANO, CEP 01451-917, 7107 - SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Telefone</h4>
+                                <p>(11) 93945-4390</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">E-mail</h4>
+                                <p>contato@gilvanedificacoes.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Horário de Atendimento</h4>
+                                <p>Segunda a Sexta, das 8h às 17h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Fale Conosco Agora</h3>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:contato@gilvanedificacoes.com.br" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                            <i class="fas fa-envelope"></i> E-mail
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Envie uma Mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-1">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option value="">Selecione...</option>
+                                <option value="orcamento">Solicitação de Orçamento</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="parceria">Parceria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium w-full transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="bg-amber-500 text-white p-2 rounded mr-3">
+                            <i class="fas fa-building text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">GILVAN <span class="text-amber-500">EDIFICAÇÕES</span></h2>
+                    </div>
+                    <p class="mt-2 text-gray-400">Excelência em construção civil desde 2010.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">CNPJ: 31.973.343/0001-66</p>
+                <p class="text-gray-400 text-sm">© 2023 Gilvan Edificações. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Form submission (simulated)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                form.reset();
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
