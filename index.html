@@ -6,6 +6,7 @@
     <title>Gilvan Edificações | Construção Civil de Excelência</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
@@ -46,8 +47,38 @@
         .section-divider {
             width: 100px;
             height: 4px;
-            background: #f59e0b;
+            background: #0066CC;
             margin: 20px auto;
+        }
+        
+        /* Custom Fonts */
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            max-height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .logo-text span {
+            color: #0066CC;
         }
     </style>
 </head>
@@ -62,19 +93,19 @@
     <!-- Header/Navbar -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="bg-amber-500 text-white p-2 rounded mr-3">
-                    <i class="fas fa-building text-xl"></i>
-                </div>
-                <h1 class="text-xl font-bold text-gray-800">GILVAN <span class="text-amber-500">EDIFICAÇÕES</span></h1>
+            <div class="logo-container">
+                <!-- Logo Image (replace src with your actual logo path) -->
+                <img src="YOUR_LOGO_PATH_HERE" alt="Gilvan Edificações" class="logo-img" onerror="this.style.display='none'">
+                <!-- Fallback Text Logo -->
+                <h1 class="logo-text">GILVAN <span>EDIFICAÇÕES</span></h1>
             </div>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#inicio" class="text-gray-800 hover:text-amber-500 font-medium">Início</a>
-                <a href="#sobre" class="text-gray-800 hover:text-amber-500 font-medium">Sobre Nós</a>
-                <a href="#servicos" class="text-gray-800 hover:text-amber-500 font-medium">Serviços</a>
-                <a href="#portfolio" class="text-gray-800 hover:text-amber-500 font-medium">Portfólio</a>
-                <a href="#contato" class="text-gray-800 hover:text-amber-500 font-medium">Contato</a>
+                <a href="#inicio" class="text-gray-800 hover:text-blue-600 font-medium">Início</a>
+                <a href="#sobre" class="text-gray-800 hover:text-blue-600 font-medium">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-800 hover:text-blue-600 font-medium">Serviços</a>
+                <a href="#portfolio" class="text-gray-800 hover:text-blue-600 font-medium">Portfólio</a>
+                <a href="#contato" class="text-gray-800 hover:text-blue-600 font-medium">Contato</a>
             </nav>
             
             <div class="md:hidden">
@@ -86,11 +117,11 @@
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#inicio" class="block py-2 text-gray-800 hover:text-amber-500">Início</a>
-            <a href="#sobre" class="block py-2 text-gray-800 hover:text-amber-500">Sobre Nós</a>
-            <a href="#servicos" class="block py-2 text-gray-800 hover:text-amber-500">Serviços</a>
-            <a href="#portfolio" class="block py-2 text-gray-800 hover:text-amber-500">Portfólio</a>
-            <a href="#contato" class="block py-2 text-gray-800 hover:text-amber-500">Contato</a>
+            <a href="#inicio" class="block py-2 text-gray-800 hover:text-blue-600">Início</a>
+            <a href="#sobre" class="block py-2 text-gray-800 hover:text-blue-600">Sobre Nós</a>
+            <a href="#servicos" class="block py-2 text-gray-800 hover:text-blue-600">Serviços</a>
+            <a href="#portfolio" class="block py-2 text-gray-800 hover:text-blue-600">Portfólio</a>
+            <a href="#contato" class="block py-2 text-gray-800 hover:text-blue-600">Contato</a>
         </div>
     </header>
 
@@ -103,7 +134,7 @@
                 <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
                     <i class="fab fa-whatsapp"></i> Fale Conosco
                 </a>
-                <a href="#servicos" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                <a href="#servicos" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
                     <i class="fas fa-hard-hat"></i> Nossos Serviços
                 </a>
             </div>
@@ -130,32 +161,32 @@
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-amber-500"></i>
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-blue-600"></i>
                             </div>
                             <span class="text-gray-700">Qualidade garantida</span>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-amber-500"></i>
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-blue-600"></i>
                             </div>
                             <span class="text-gray-700">Prazos cumpridos</span>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-amber-500"></i>
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-blue-600"></i>
                             </div>
                             <span class="text-gray-700">Equipe especializada</span>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-amber-500"></i>
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check-circle text-blue-600"></i>
                             </div>
                             <span class="text-gray-700">Materiais de primeira</span>
                         </div>
                     </div>
                     
-                    <a href="#contato" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition">
+                    <a href="#contato" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
                         Solicite um Orçamento
                     </a>
                 </div>
@@ -175,36 +206,36 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
-                        <i class="fas fa-home text-amber-500 text-2xl"></i>
+                    <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Residencial</h3>
                     <p class="text-gray-600 mb-4">Projetamos e construímos residências de alto padrão, desde casas até condomínios fechados, com atenção aos detalhes e acabamentos refinados.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
                         Saiba mais <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
                 
                 <!-- Service 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
-                        <i class="fas fa-building text-amber-500 text-2xl"></i>
+                    <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-building text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Comercial</h3>
                     <p class="text-gray-600 mb-4">Edifícios corporativos, lojas, shopping centers e outros empreendimentos comerciais com soluções personalizadas para cada negócio.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
                         Saiba mais <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
                 
                 <!-- Service 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div class="bg-amber-100 p-3 rounded-full inline-block mb-4">
-                        <i class="fas fa-industry text-amber-500 text-2xl"></i>
+                    <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                        <i class="fas fa-industry text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Construção Industrial</h3>
-                    <p class="text-gray-600 mb-4">Galpões industriais, fábricas e complexos logísticos com estrutura robusta e soluções técnicas especializadas para atender sua produção.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-amber-500 font-medium inline-flex items-center">
+                    <p class="text-gray-600 mb-4">Galpões industriales, fábricas e complexos logísticos com estrutura robusta e soluções técnicas especializadas para atender sua produção.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
                         Saiba mais <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -230,7 +261,7 @@
                         <p class="text-gray-600 mb-4">Condomínio de alto padrão com 24 unidades, área de lazer completa e acabamentos premium.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">Concluído: Jun/2022</span>
-                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                            <a href="#" class="text-blue-600 font-medium">Ver detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +274,7 @@
                         <p class="text-gray-600 mb-4">Torre comercial de 12 andares com estrutura moderna, elevadores de alta performance e fachada envidraçada.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">Concluído: Dez/2021</span>
-                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                            <a href="#" class="text-blue-600 font-medium">Ver detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -256,14 +287,14 @@
                         <p class="text-gray-600 mb-4">Complexo industrial com 5 galpões de 2.000m² cada, escritórios administrativos e área de carga.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">Concluído: Mar/2023</span>
-                            <a href="#" class="text-amber-500 font-medium">Ver detalhes</a>
+                            <a href="#" class="text-blue-600 font-medium">Ver detalhes</a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-10">
-                <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
                     <i class="fas fa-images mr-2"></i> Ver Mais Projetos
                 </a>
             </div>
@@ -285,7 +316,7 @@
                     
                     <div class="space-y-4 mb-8">
                         <div class="flex items-start">
-                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                            <div class="bg-blue-600 p-2 rounded-full mr-4">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
@@ -295,7 +326,7 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                            <div class="bg-blue-600 p-2 rounded-full mr-4">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
@@ -305,7 +336,7 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                            <div class="bg-blue-600 p-2 rounded-full mr-4">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
@@ -315,7 +346,7 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-500 p-2 rounded-full mr-4">
+                            <div class="bg-blue-600 p-2 rounded-full mr-4">
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div>
@@ -330,7 +361,7 @@
                         <a href="https://api.whatsapp.com/send?phone=5511939454390" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="mailto:contato@gilvanedificacoes.com.br" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
+                        <a href="mailto:contato@gilvanedificacoes.com.br" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition">
                             <i class="fas fa-envelope"></i> E-mail
                         </a>
                     </div>
@@ -338,25 +369,25 @@
                 
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl font-semibold mb-4">Envie uma Mensagem</h3>
-                    <form class="space-y-4">
+                    <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="name" class="block mb-1">Nome Completo</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                         
                         <div>
                             <label for="email" class="block mb-1">E-mail</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                         
                         <div>
                             <label for="phone" class="block mb-1">Telefone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
                         
                         <div>
                             <label for="subject" class="block mb-1">Assunto</label>
-                            <select id="subject" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <select id="subject" name="subject" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 <option value="">Selecione...</option>
                                 <option value="orcamento">Solicitação de Orçamento</option>
                                 <option value="duvida">Dúvida</option>
@@ -367,10 +398,10 @@
                         
                         <div>
                             <label for="message" class="block mb-1">Mensagem</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                         </div>
                         
-                        <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium w-full transition">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium w-full transition">
                             Enviar Mensagem
                         </button>
                     </form>
@@ -385,10 +416,10 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <div class="flex items-center">
-                        <div class="bg-amber-500 text-white p-2 rounded mr-3">
+                        <div class="bg-blue-600 text-white p-2 rounded mr-3">
                             <i class="fas fa-building text-xl"></i>
                         </div>
-                        <h2 class="text-xl font-bold">GILVAN <span class="text-amber-500">EDIFICAÇÕES</span></h2>
+                        <h2 class="text-xl font-bold">GILVAN <span class="text-blue-400">EDIFICAÇÕES</span></h2>
                     </div>
                     <p class="mt-2 text-gray-400">Excelência em construção civil desde 2010.</p>
                 </div>
@@ -420,15 +451,26 @@
             menu.classList.toggle('hidden');
         });
         
-        // Form submission (simulated)
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-                form.reset();
-            });
-        }
+        // Form submission to WhatsApp
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = encodeURIComponent(document.getElementById('name').value);
+            const email = encodeURIComponent(document.getElementById('email').value);
+            const phone = encodeURIComponent(document.getElementById('phone').value);
+            const subject = encodeURIComponent(document.getElementById('subject').value);
+            const message = encodeURIComponent(document.getElementById('message').value);
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Assunto: ${subject}%0ANome: ${name}%0AEmail: ${email}%0ATelefone: ${phone}%0AMensagem: ${message}`;
+            
+            // Open WhatsApp with the message
+            window.open(`https://api.whatsapp.com/send?phone=5511939454390&text=${whatsappMessage}`, '_blank');
+            
+            // Reset form
+            this.reset();
+        });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
